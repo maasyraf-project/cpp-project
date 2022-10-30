@@ -4,7 +4,7 @@
 using namespace std;
 
 // create mathematical function
-float c(float a, float b) {
+float funcC(float a, float b) {
     float computeC;
 
     computeC = sqrt(pow(a,2) + pow(b,2));
@@ -16,6 +16,7 @@ int main() {
     float newFloat = 7.4f;
     float a = 3;
     float b = 4;
+    float c;
     int pow1 = 2;
     int pow2 = 3;
     float pow3 = 0.5;
@@ -31,7 +32,13 @@ int main() {
     cout << "tan(" << newFloat << ") = " << tan(newFloat) << endl <<'\n';
 
     cout << "Test a function: " << endl;
-    c(a, b);
+    c = funcC(a, b);
+
+    if (c == 5) {
+        cout << "The results of the function is correct, it is " << c << endl;
+    } else {
+        cout << "The results is does not match!";
+    }
 
     return 0;
 }
